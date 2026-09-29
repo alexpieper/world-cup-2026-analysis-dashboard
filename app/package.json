@@ -1,0 +1,35 @@
+{
+  "name": "world-cup-2026-analytics-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "data:build": "node scripts/build-data.mjs",
+    "predev": "npm run data:build",
+    "dev": "vite --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run data:build && npm run typecheck && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "npm run data:build && vitest run"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "flag-icons": "^7.5.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/topojson-client": "^3.1.5",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^5.6.3",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9"
+  }
+}

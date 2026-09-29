@@ -1,0 +1,7 @@
+node_modules/
+dist/
+public/data/world-cup.json
+public/flags/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts

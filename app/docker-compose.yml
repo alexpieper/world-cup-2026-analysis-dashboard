@@ -1,0 +1,13 @@
+services:
+  world-cup-app:
+    build:
+      context: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ..:/workspace:ro
+    environment:
+      - DATASET_ROOT=/workspace
+    command: npm run dev
