@@ -19,7 +19,7 @@ export function WorldCupDataProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/data/world-cup.json")
+    fetch("/api/dataset")
       .then((response) => {
         if (!response.ok) throw new Error(`Unable to load data (${response.status})`);
         return response.json() as Promise<WorldCupData>;
